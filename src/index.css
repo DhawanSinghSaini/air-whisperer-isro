@@ -2,41 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ISRO Forecast Dashboard Design System - Satellite & Space Inspired */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Space-Inspired Palette */
+    --background: 220 30% 96%;
+    --foreground: 215 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Satellite Data Blue Theme */
+    --primary: 210 95% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Deep Space Secondary */
+    --secondary: 220 25% 88%;
+    --secondary-foreground: 215 25% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Subtle Background Tones */
+    --muted: 220 20% 92%;
+    --muted-foreground: 215 15% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Atmospheric Accent */
+    --accent: 195 85% 50%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Alert Systems */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --warning: 35 90% 55%;
+    --success: 120 60% 45%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Interface Elements */
+    --border: 220 15% 85%;
+    --input: 220 15% 85%;
+    --ring: 210 95% 45%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(210 95% 45%), hsl(195 85% 50%), hsl(220 70% 60%));
+    --gradient-satellite: linear-gradient(180deg, hsl(220 30% 96%), hsl(210 40% 92%));
+    --gradient-data: linear-gradient(135deg, hsl(210 100% 65% / 0.1), hsl(195 85% 50% / 0.1));
+
+    /* Shadows & Effects */
+    --shadow-satellite: 0 20px 50px -10px hsl(210 95% 45% / 0.3);
+    --shadow-card: 0 4px 20px -2px hsl(220 25% 25% / 0.1);
+    --shadow-glow: 0 0 40px hsl(210 100% 65% / 0.4);
+
+    /* Animation Timing */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +122,54 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
+}
+
+@layer components {
+  /* Hero Gradient Background */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Satellite Data Card */
+  .satellite-card {
+    @apply bg-card border border-border rounded-xl shadow-[--shadow-card] transition-all duration-300;
+    @apply hover:shadow-[--shadow-satellite] hover:-translate-y-1;
+  }
+
+  /* Data Visualization Background */
+  .data-viz-bg {
+    background: var(--gradient-data);
+  }
+
+  /* Floating Animation */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+  }
+
+  /* Glow Effect */
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Satellite Orbit Animation */
+  .orbit-animation {
+    animation: orbit 20s linear infinite;
+  }
+
+  @keyframes orbit {
+    from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+  }
+
+  /* Status Indicator */
+  .status-good { @apply bg-success text-white; }
+  .status-moderate { @apply bg-warning text-white; }
+  .status-poor { @apply bg-destructive text-white; }
 }
