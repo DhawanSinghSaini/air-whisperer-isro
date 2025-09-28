@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Satellite, ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import heroSatellite from "@/assets/hero-satellite.jpg";
 
 export const HeroSection = () => {
+  const navigate = useNavigate();
+
   const handleViewForecasts = () => {
-    // Navigate to dashboard - placeholder for now
-    console.log("Navigating to dashboard...");
+    navigate('/sites');
   };
 
   return (
