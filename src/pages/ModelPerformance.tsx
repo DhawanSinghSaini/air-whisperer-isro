@@ -10,7 +10,8 @@ const performanceData = [
   { site: "Central Delhi", rmse: 7.8, mae: 5.9, r2: 0.91, accuracy: 95.1 },
   { site: "East Delhi", rmse: 10.1, mae: 8.2, r2: 0.82, accuracy: 89.7 },
   { site: "North Delhi", rmse: 8.7, mae: 6.8, r2: 0.87, accuracy: 92.5 },
-  { site: "Dwarka", rmse: 7.2, mae: 5.4, r2: 0.93, accuracy: 96.3 }
+  { site: "North-West Delhi", rmse: 7.2, mae: 5.4, r2: 0.93, accuracy: 96.3 },
+  { site: "South-West Delhi", rmse: 7.2, mae: 6.4, r2: 0.83, accuracy: 95.3 }
 ];
 
 const trainingHistory = [
