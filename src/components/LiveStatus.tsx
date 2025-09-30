@@ -1,12 +1,16 @@
 import { MapPin, TrendingUp, TrendingDown } from "lucide-react";
 
 const delhiSites = [
+  
   { site: "South Delhi", O3: 42.1, NO2: 18.3, status: "moderate", trend: "up" },
   { site: "West Delhi", O3: 35.7, NO2: 22.9, status: "poor", trend: "down" },
   { site: "Central Delhi", O3: 39.2, NO2: 15.8, status: "good", trend: "down" },
   { site: "East Delhi", O3: 48.5, NO2: 26.1, status: "poor", trend: "up" },
   { site: "North Delhi", O3: 33.8, NO2: 19.7, status: "moderate", trend: "down" },
-  { site: "Dwarka", O3: 29.4, NO2: 14.2, status: "good", trend: "down" },
+  { site: "North-West Delhi", O3: 29.4, NO2: 14.2, status: "good", trend: "down" },
+  { site: "South-West Delhi", O3: 59.0, NO2: 27.0, status: "moderate", trend: "up" }
+
+
 ];
 
 const getStatusColor = (status: string) => {
