@@ -52,13 +52,22 @@ const monitoringSites = [
     description: "Mixed urban area with transportation hubs"
   },
   {
-    id: "dwarka",
-    name: "Dwarka",
+    id: "North-West Delhi",
+    name: "North-West Delhi",
     location: "28.5921°N, 77.0460°E",
     avgAQI: 112,
     lastUpdated: "2025-01-28",
     status: "good",
     description: "Planned residential township with green spaces"
+  },
+  {
+    id: "South-West Delhi",
+    name: "South Delhi",
+    location: "28.71052°N, 77.24951°E",
+    avgAQI: 156,
+    lastUpdated: "2025-01-28",
+    status: "moderate",
+    description: "Urban residential area with mixed commercial activity"
   }
 ];
 
